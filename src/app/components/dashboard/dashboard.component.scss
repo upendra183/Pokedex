@@ -1,0 +1,32 @@
+.main {
+    margin: 10px 55px;
+}
+
+.box-img {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 3%;
+    border: 1px solid black;
+    border-radius: 2%;
+    margin: 2%
+}
+
+.box-img img {
+    height: 200px;
+    width: 200px;
+}
+
+.box-img p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.box-padding {
+    padding: 10px 269px;
+
+}
+.img{
+    width: 20%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}

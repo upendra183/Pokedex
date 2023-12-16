@@ -1,0 +1,11 @@
+<div class="bg-primary modal-header modal-primary text-light">
+    <h4 class="modal-title" id="modal-basic-title">{{AlertData.name}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body p-0">
+<app-pokemon-details [AlertData]="AlertData"></app-pokemon-details>
+</div>
+<div class="modal-footer" *ngIf="AlertData?.isFooter">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Cancel</button>
+</div>
+

@@ -1,0 +1,25 @@
+<div class="main bg-custom">
+  <div class="row my-3">
+    <div class="col-12 d-flex justify-content-center">
+      <input type="text" class="form-control w-25" placeholder="Search name..." [(ngModel)]="term"/>
+    </div>
+  </div>
+  <div class="row">
+    <ng-container *ngIf="(allDataList | search : term) as result">
+        <div class="col-3" *ngFor="let pok of result" (click)="cardDetails(pok)">
+            <div class="box-img shadow">
+              <img class="_2puWtW _3a3qyb img" alt="" src="{{ pok.img_path }}" />
+              <p class="p-0 py-2">{{ pok.name }}</p>
+            </div>
+          </div>
+          <div *ngIf="result.length == 0" class="text-center">No record Found</div>
+
+    </ng-container>
+    
+  </div>
+  <!-- <div class="row my-3">
+    <div class="col-12 d-flex justify-content-center">
+      <button class="btn btn-primary" (click)="load()">Load more</button>
+    </div>
+  </div> -->
+</div>
